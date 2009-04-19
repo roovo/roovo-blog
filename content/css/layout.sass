@@ -1,0 +1,152 @@
+---
+extension:  css
+filter:     sass
+layout:     nil   # no layout
+dirty:      true
+---
+
+!aqua_blue        = #6FA2AE
+!darkened_aqua    = #43778F
+!rusty_orange     = #E87830
+!darkened_orange  = #D36A2D
+!light_grey       = #999999
+!super_light_grey = #F3F3FA
+
+// ********************************
+// *********** colors *************
+// ********************************
+body
+  :border-top=              10px solid !aqua_blue
+  :padding                  0 0 5px
+a, a:focus
+  :color=                   !aqua_blue
+  
+a:hover
+  :color=                   !darkened_aqua
+
+h1, h2, h3, h4, h5, h6
+  :color=                   !rusty_orange
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+  :color=                   !rusty_orange
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover
+  :color=                   !darkened_orange
+
+h1#branding
+  :color=                   !aqua_blue
+
+h1#branding a
+  :color=                   !aqua_blue
+
+h1#branding a:hover
+  :color=                   !darkened_aqua
+
+// *********************************
+// *********** general *************
+// *********************************
+a, a:focus
+  :text-decoration         none
+ 
+a:hover
+  :text-decoration         underline
+
+img
+  :display                 block
+  :margin-left             auto
+  :margin-right            auto
+
+h1, h2, h3, h4, h5, h6
+  :line-height             1.2em
+  :margin-bottom           0.3em
+  :font-weight             normal
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover
+  :text-decoration         none
+
+hr
+  :margin-bottom          0.3em
+
+// ********************************
+// *********** header *************
+// ********************************
+
+h1#branding
+  :font-size                3em
+  :font-weight              normal
+  :padding                  .4em 0 .3em 0
+
+  .section-title
+    :font-size              0.5em
+
+// ********************************
+// *********** posts **************
+// ********************************
+.post
+  :border-left=             2px solid !aqua_blue
+  :padding-left             1em
+  :margin-bottom            2em
+
+  .post-info
+    :color=                 !light_grey
+    :background-image       url("/images/decor/underline1.jpg")
+    :background-repeat      no-repeat
+    :background-position    0% 100%
+    :padding-bottom         12px
+    :margin-bottom          0.5em
+
+// ********************************
+// ********* side-boxes ***********
+// ********************************
+.side-box
+  :font-size                0.9em
+  :background-color=        !super_light_grey
+  :margin-bottom            1em
+  :padding-left             5px
+  :color=                    !light_grey
+
+  .corner-top div
+    :background               url("/images/decor/corner_tl.png") no-repeat top left
+  .corner-top
+    :background               url("/images/decor/corner_tr.png") no-repeat top right
+  .corner-bottom div
+    :background               url("/images/decor/corner_bl.png") no-repeat bottom left
+  .corner-bottom
+    :background               url("/images/decor/corner_br.png") no-repeat bottom right
+
+  .corner-top div, .corner-top, .corner-bottom div, .corner-bottom
+    :width                    100%
+    :height                   7px
+    :font-size                1px
+
+  .corner-content           
+    :margin                   0 7px
+
+  .side-box-content
+    :margin-left              1em
+
+  h3
+    :font-size                1.5em
+
+  h4, h5, h6
+    :font-size                1.2em
+    :margin-top                0.9em
+
+  p
+    :margin-bottom            0.5em
+
+  ul
+    :list-style               none
+    :margin                   0.4em 2px 0 0
+
+  li
+    :margin                   0
+    :padding                  0
+
+
+// ********************************
+// *********** disqus *************
+// ********************************
+img
+  :display                    inline
+

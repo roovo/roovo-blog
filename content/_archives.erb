@@ -1,0 +1,13 @@
+---
+filter:   erb
+---
+
+<% sidebar_box "Archives" do %>
+  <ul>
+    <% archives_hash.keys.sort.reverse.each do |date| %>
+      <li>
+        <%= link_to(date.strftime("%B %Y"), "/posts/#{date.year}/#{date.month_with_leading_zero}/index.html") << " (#{archives_hash[date]})" %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

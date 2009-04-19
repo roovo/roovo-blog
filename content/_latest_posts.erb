@@ -1,0 +1,18 @@
+---
+filter:   erb
+---
+
+
+<% posts = @pages.find(10,  :in_directory => '/posts', 
+                            :recursive    => true, 
+                            :sort_by      => "created_at", 
+                            :reverse      => true, 
+                            :blog_post    => true) %>
+
+<% sidebar_box "Latest" do %>
+  <ul>
+    <% posts.each do |post_page| %>
+      <li><%= link_to_page(post_page) %></li>
+    <% end %>
+  </ul>
+<% end %>

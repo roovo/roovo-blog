@@ -1,0 +1,9 @@
+---
+title:          "Archives: 2009"
+show_heading:   true
+created_at:     2009-04-17 13:43:36.942659 +01:00
+filter:         erb
+dirty:          true
+archive:        true
+---
+<%= render :partial => '/blog_roll' %>

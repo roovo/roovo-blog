@@ -1,0 +1,20 @@
+require 'uv'
+task :default => :build
+
+desc 'deploy the site to the webserver'
+task :deploy => [:build, 'deploy:custom_ssh']
+
+SITE.exclude           += %w(\.DS_Store \*\.swp \*\.swo) 
+SITE.blog_dir           = 'posts'
+SITE.tags_dir           = 'tags'
+
+SITE.site_root          = 'http://roovoweb.com'
+
+# for deployment
+SITE.user               = 'username'
+SITE.host               = 'roovoweb.com'
+SITE.ssh_port           = _ssh_port
+SITE.remote_dir         = 'path/to/location'
+
+SITE.disqus_forum_name  = 'roovoweb'
+# EOF:

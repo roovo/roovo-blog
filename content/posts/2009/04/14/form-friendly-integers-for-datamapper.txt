@@ -1,0 +1,29 @@
+--- 
+title:      DataMapper - Form Friendly Integers
+created_at: 2009-04-14 16:37:30.933770 +01:00
+blog_post:  true
+filter:
+  - textile
+tags:
+  - tech
+  - ruby
+  - datamapper
+--- 
+
+I like friendly things and DataMapper is one of them.  I also like friendly forms and am a bit picky about how they should behave. Here's part of a form for inputting a value into an Integer property on a DataMapper model.
+
+!/images/content/before_save.png!
+
+Notice that some dumb-ass has entered something stupid in the text box. Now when they submit the form they end up seeing:
+
+!/images/content/after_save.png!
+
+The error is great, but I'm not big on the disappearing trick that the text has done.  Internally DataMapper is casting the input to be an Integer which results in the text vanishing never to be seen again.  If the value input was a decimal then if there were no other errors on the form it would submit OK without complaining that the number wasn't an integer and save the integer part of the number to the database - WTF!
+
+h4. The solution
+
+There's a very helpful "docs page":http://datamapper.org/doku.php?id=dm-more:dm-types which explains how to write your own DataMapper types.  So I did and it was pretty straightforward.  The result is on my github account:
+
+"dm-form_friendly_integer":http://github.com/roovo/dm-form_friendly_integer
+
+You can use this in your models and your form fields will behave a bit more sensibly (well I think so anyway).

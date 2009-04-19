@@ -1,0 +1,33 @@
+---
+filter:   erb
+dirty:    true
+---
+<% page = @page if @page.blog_post %>
+
+<div class="post">
+  <div class="post-title">
+
+    <h3><%= link_to_page_unless_current(page) %></h3>
+    
+    <p class="post-info">
+      <%= page.created_at.strftime("%A %e#{page.created_at.day_ordinal_suffix} %b %Y @ %l:%m%p").gsub(/(AM|PM)$/) { |s| s.downcase }  %>
+    </p>
+  </div>
+  
+  <div class="post-entry">
+    <%= @page.blog_post ? @content : render(page) %>
+  </div>
+
+  <div class="stats">
+    <hr />
+    <% if page.tags %>
+      <span>tags: <%= write_tags(page) %></span> |
+    <% end %>
+    <span>
+      comments: <%= link_to "view", page.url, :anchor => 'disqus_thread' %>
+    </span>
+    <% if @page.blog_post %>
+      <%= render :partial => '/disqus_thread' %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+---
+filter:     erb
+dirty:      true
+---
+
+<%
+  limit     = @page.limit || :all
+  paginate  = @page.paginate || true
+  per_page  = @page.per_page || 10
+  tag_name  = @page.tag
+%>
+
+<%
+  if tag_name && !tag_name.nil?
+    posts = posts_with_tag(tag_name, limit)
+  else
+    posts = @pages.find(limit,  :in_directory   => @page.dir, 
+                                :recursive      => true,
+                                :sort_by        => "created_at", 
+                                :reverse        => true, 
+                                :blog_post      => true)
+  end
+%>
+
+<% if paginate %>
+  <% paginate(posts, per_page) do |post| %>
+    <%= render :partial => '/post', :locals => {:page => post} %>
+  <% end %>
+<% else %>
+  <% posts.each do |post| %>
+    <%= render :partial => '/post', :locals => {:page => post} %>
+  <% end %>
+<% end %>

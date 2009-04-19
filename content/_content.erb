@@ -1,0 +1,10 @@
+---
+filter:   erb
+dirty:    true
+---
+
+<%= if @page.blog_post 
+      render :partial => '/post'
+    else
+      @content
+    end %>
