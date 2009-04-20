@@ -5,5 +5,7 @@ filter:         erb
 dirty:          true
 archive:        true
 show_heading:   true
+sitemap:        true
+priority:       0.3
 ---
 <%= render :partial => '/blog_roll' %>

@@ -4,6 +4,8 @@ show_heading:   true
 created_at:     <%= Time.now.to_y %>
 tag:            <%= tag %>
 filter:         haml
+sitemap:        true
+priority:       0.8
 dirty :         true
 ---
 =render :partial => '/blog_roll'
