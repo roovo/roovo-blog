@@ -1,0 +1,6 @@
+---
+filter:       erb
+extension:    txt
+layout:       nil
+---
+Sitemap: /sitemap.xml
