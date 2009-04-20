@@ -1,0 +1,22 @@
+--- 
+title:          The End of Dependency Hell?
+created_at:     2009-04-20 23:12:49.163580 +01:00
+author:         roovo
+blog_post:      true
+sitemap:        true
+priority:       0.5
+filter:
+  - textile
+tags:
+  - tech
+  - ruby
+  - merb
+--- 
+
+Saw an interesting "commit message":http://github.com/wycats/merb/commit/a5ee3a0d9e9e19480a32c35c4267480e816d6592 in the merb repo on github today.
+
+The part that caught my attention was:
+
+<blockquote><p>Adds support for Merb::Config[:ignore_system_gems], which if set to true will *not* fallback to system gems. This enables you to be sure your merb app has all required gems bundled, and not accidently using system gems.</p></blockquote>
+
+This sounds like it has the potential to keep all those nasty already loaded errors at bay.  Can't wait to see if it's true.
