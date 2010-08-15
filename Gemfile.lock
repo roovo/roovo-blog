@@ -1,0 +1,55 @@
+--- 
+dependencies: 
+  webby: 
+    group: 
+    - :default
+    version: = 0.9.4
+  haml: 
+    group: 
+    - :default
+    version: = 3.0.17
+  coderay: 
+    group: 
+    - :default
+    version: ">= 0"
+  RedCloth: 
+    group: 
+    - :default
+    version: ">= 0"
+  logging: 
+    group: 
+    - :default
+    version: = 0.9.7
+specs: 
+- rake: 
+    version: 0.8.7
+- RedCloth: 
+    version: 4.2.3
+- coderay: 
+    version: 0.9.3
+- configuration: 
+    version: 1.1.0
+- directory_watcher: 
+    version: 1.3.2
+- flexmock: 
+    version: 0.8.7
+- haml: 
+    version: 3.0.17
+- hpricot: 
+    version: 0.8.2
+- launchy: 
+    version: 0.3.7
+- lockfile: 
+    version: 1.4.3
+- logging: 
+    version: 0.9.7
+- loquacious: 
+    version: 1.6.4
+- rspec: 
+    version: 1.3.0
+- webby: 
+    version: 0.9.4
+hash: a6d3fd84bd9c6b64b6da6603d3efd6ef21d516d0
+sources: 
+- Rubygems: 
+    uri: http://rubygems.org
