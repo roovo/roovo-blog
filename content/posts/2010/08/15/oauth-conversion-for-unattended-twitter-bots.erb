@@ -1,0 +1,40 @@
+--- 
+title:          OAuth conversion for unattended twitter bots
+created_at:     2010-08-15 20:23:30.933770 +01:00
+author:         roovo
+blog_post:      true
+sitemap:        true
+priority:       0.5
+filter:
+  - erb
+  - textile
+tags:
+  - tech
+  - ruby
+  - twitter
+  - oauth
+--- 
+I have a couple of ruby scripts which scrape information off websites to post to their own twitter accounts: "felixstowe port":http://twitter.com/felixstowe_port and "virgin movies":http://twitter.com/virgin_movies.  These were both set up quite a while ago using Twitter4r and basic authentication and so were doomed to stop working come the end of the month if I didn't update them.
+
+As today is the start of the basic-auth turn off process I though I'd better convert them over to OAth.  I already had a fair understanding of how OAth worked, but I found it pretty tricky to find the information I needed on how to get these unattended scripts set up to work using it.
+
+The first thing I did was to switch over to John Nunemaker's "Twitter gem":http://twitter.rubyforge.org/ as I couldn't work out if Twitter4r supported OAuth or not and Johns obviously did and has a really helpful page on how to set it up - here's a copy of the snippet you need.
+
+<% coderay(:lang => "ruby", :line_numbers => "inline") do -%>
+oauth = Twitter::OAuth.new('consumer token', 'consumer secret')
+oauth.authorize_from_access('access token', 'access secret')
+
+client = Twitter::Base.new(oauth)
+client.friends_timeline.each  { |tweet| puts tweet.inspect }
+client.user_timeline.each     { |tweet| puts tweet.inspect }
+client.replies.each           { |tweet| puts tweet.inspect }
+client.update('Heeeyyyyoooo from Twitter Gem!')
+<% end -%>
+
+Then all you need is the consumer and access keys and secrets.
+
+To generate these you need to add an application to your twitter account (go to "http://dev.twitter.com/apps":http://dev.twitter.com/apps after logging in to your account).  Fill out the info to register your application (i.e. your script).  The important items are the Application Name as this will appear as the source of the tweets on your twitter stream, and the Application Type which you need to set to Client (as you can't use callback urls in an unattended script).
+
+Once your application details have been saved you can get the details you need: the consumer key (or token) and secret are on the application details page and the access token and secret are available from the My Access Token link (oauth_token and oauth_token_secret).
+
+Fill them in the code above and you should be good to go.

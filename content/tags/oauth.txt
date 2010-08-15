@@ -1,9 +1,9 @@
 ---
-title:          "Tagged With: ruby"
-created_at:     2010-08-15 20:47:15.879989 +01:00
+title:          "Tagged With: oauth"
+created_at:     2010-08-15 20:47:15.876986 +01:00
 author:         roovo
 show_heading:   true
-tag:            ruby
+tag:            oauth
 filter:         haml
 sitemap:        true
 priority:       0.8

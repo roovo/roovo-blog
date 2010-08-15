@@ -1,0 +1,13 @@
+---
+title:          "Archives: 2010"
+created_at:     2010-08-15 20:20:36.942659 +01:00
+author:         roovo
+show_heading:   true
+filter:         erb
+dirty:          true
+archive:        true
+sitemap:        true
+priority:       0.2
+---
+<%= render :partial => '/blog_roll' %>
+
