@@ -5,3 +5,10 @@ built using the wonderful Webby: http://github.com/TwP/webby/
 many files lifted from Aaron Qian's blog: http://github.com/aq1018/aaron-blog
 
 using the fluid 960 grid system for layout: http://github.com/bauhouse/fluid960gs
+
+----------------
+Have to add new blog posts manually as I can't seem to do this with the webby stuuuf
+
+bundle exec webby build               # to build the site
+bundle exec webby deploy:custom_ssh   # to deploy
+
