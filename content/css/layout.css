@@ -1,0 +1,113 @@
+body {
+  border-top: 10px solid #6fa2ae;
+  padding: 0 0 5px; }
+
+a, a:focus {
+  color: #6fa2ae; }
+
+a:hover {
+  color: #43778f; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #e87830; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #e87830; }
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  color: #d36a2d; }
+
+h1#branding {
+  color: #6fa2ae; }
+
+h1#branding a {
+  color: #6fa2ae; }
+
+h1#branding a:hover {
+  color: #43778f; }
+
+a, a:focus {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+  margin-bottom: 0.3em;
+  font-weight: normal; }
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  text-decoration: none; }
+
+hr {
+  margin-bottom: 0.3em; }
+
+blockquote {
+  font-family: Georgia, 'Times New Roman', serif;
+  padding-left: 1em;
+  border-left: 4px solid #ccc; }
+
+h1#branding {
+  font-size: 3em;
+  font-weight: normal;
+  padding: .4em 0 .3em 0; }
+  h1#branding .section-title {
+    font-size: 0.5em; }
+
+.post {
+  border-left: 2px solid #6fa2ae;
+  padding-left: 1em;
+  margin-bottom: 2em; }
+  .post .post-info {
+    color: #999999;
+    background-image: url("/images/decor/underline1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    padding-bottom: 12px;
+    margin-bottom: 0.5em; }
+
+.side-box {
+  font-size: 0.9em;
+  background-color: #f3f3fa;
+  margin-bottom: 1em;
+  padding-left: 5px;
+  color: #999999; }
+  .side-box .corner-top div {
+    background: url("/images/decor/corner_tl.png") no-repeat top left; }
+  .side-box .corner-top {
+    background: url("/images/decor/corner_tr.png") no-repeat top right; }
+  .side-box .corner-bottom div {
+    background: url("/images/decor/corner_bl.png") no-repeat bottom left; }
+  .side-box .corner-bottom {
+    background: url("/images/decor/corner_br.png") no-repeat bottom right; }
+  .side-box .corner-top div, .side-box .corner-top, .side-box .corner-bottom div, .side-box .corner-bottom {
+    width: 100%;
+    height: 7px;
+    font-size: 1px; }
+  .side-box .corner-content {
+    margin: 0 7px; }
+  .side-box .side-box-content {
+    margin-left: 1em; }
+  .side-box h3 {
+    font-size: 1.5em; }
+  .side-box h4, .side-box h5, .side-box h6 {
+    font-size: 1.2em;
+    margin-top: 0.9em; }
+  .side-box p {
+    margin-bottom: 0.5em; }
+  .side-box ul {
+    list-style: none;
+    margin: 0.4em 2px 0 0; }
+  .side-box li {
+    margin: 0;
+    padding: 0; }
+
+img {
+  display: inline; }
+
