@@ -20,7 +20,7 @@ As today is the start of the basic-auth turn off process I though I'd better con
 
 The first thing I did was to switch over to John Nunemaker's "Twitter gem":http://twitter.rubyforge.org/ as I couldn't work out if Twitter4r supported OAuth or not and Johns obviously did and has a really helpful page on how to set it up - here's a copy of the snippet you need.
 
-<% coderay(:lang => "ruby", :line_numbers => "inline") do -%>
+<% coderay(:lang => "ruby") do -%>
 oauth = Twitter::OAuth.new('consumer token', 'consumer secret')
 oauth.authorize_from_access('access token', 'access secret')
 
